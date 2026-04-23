@@ -15,7 +15,7 @@
         body { 
             background: var(--dark-bg); 
             color: white; 
-            font-family: Arial, sans-serif; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
             margin: 0; 
             display: flex; 
             justify-content: center; 
@@ -24,147 +24,121 @@
             text-align: center;
         }
 
-        /* Hlavný kontajner, ktorý vycentruje kartu */
         .container {
             max-width: 800px;
             width: 90%;
             padding: 40px 20px;
         }
 
-        /* Akčný a moderný dizajn karty */
-        .csco-download-card {
+        /* Herná karta */
+        .csco-card {
             background: var(--card-bg);
             border: 2px solid var(--primary-red);
-            border-radius: 20px;
+            border-radius: 25px;
             padding: 50px 40px;
-            box-shadow: 0 0 40px rgba(255, 0, 0, 0.4);
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
             position: relative;
-            overflow: hidden;
-            transition: 0.3s;
+            transition: 0.4s ease;
         }
 
-        .csco-download-card:hover {
-            box-shadow: 0 0 60px rgba(255, 0, 0, 0.6);
-            transform: translateY(-5px);
+        .csco-card:hover {
+            box-shadow: 0 0 70px rgba(255, 0, 0, 0.5);
+            transform: translateY(-10px);
         }
 
-        /* Dekoratívne červené svetlo na pozadí karty */
-        .csco-download-card::after {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background: var(--primary-red);
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.3;
-        }
-
-        /* Tvoj panáčik, ak ho máš (ak nie, nevadí) */
-        .mini-panacik {
-            width: 100px;
-            height: auto;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 0 10px rgba(255, 0, 0, 0.5));
-        }
-
-        /* Nadpisy */
         h1 { 
             color: white; 
             text-transform: uppercase; 
-            font-size: 2.8rem;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-        }
-
-        h2.subtitle {
-            color: var(--primary-red);
-            font-size: 1.4rem;
-            text-transform: uppercase;
+            font-size: 3rem;
+            margin-bottom: 5px;
             letter-spacing: 2px;
-            margin-bottom: 40px;
         }
 
-        /* Popis hry */
+        .subtitle {
+            color: var(--primary-red);
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            display: block;
+        }
+
         .game-desc { 
             line-height: 1.8; 
             color: var(--text-gray); 
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 50px auto;
+            font-size: 1.15rem;
+            margin-bottom: 40px;
         }
 
-        /* Veľké, herné tlačidlo na stiahnutie */
+        /* Tlačidlo na stiahnutie */
         .download-btn { 
             display: inline-block; 
             background: var(--primary-red); 
             color: white; 
-            padding: 22px 50px; 
+            padding: 20px 50px; 
             text-decoration: none; 
             border-radius: 50px; 
             font-weight: bold; 
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             transition: 0.3s; 
             text-transform: uppercase; 
-            box-shadow: 0 5px 25px rgba(255, 0, 0, 0.5);
-            letter-spacing: 1px;
-            border: 2px solid transparent;
+            box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
         }
 
         .download-btn:hover { 
-            background: transparent;
-            border-color: var(--primary-red);
-            color: var(--primary-red);
-            transform: scale(1.05); 
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.7); 
+            transform: scale(1.1); 
+            background: #cc0000;
+            box-shadow: 0 15px 40px rgba(255, 0, 0, 0.6); 
         }
 
-        /* Spätný link pod kartou */
+        /* Späť domov link */
         .back-link {
             display: inline-block;
-            margin-top: 50px;
-            color: #555;
+            margin-top: 40px;
+            color: #777;
             text-decoration: none;
             font-weight: bold;
             text-transform: uppercase;
-            font-size: 0.9rem;
             transition: 0.3s;
         }
 
         .back-link:hover {
             color: white;
-            letter-spacing: 1px;
         }
 
+        /* Panáčik */
+        .panacik-img {
+            width: 120px;
+            height: auto;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(255,0,0,0.3));
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="csco-download-card">
+        <div class="csco-card">
+            <img src="lukas-oprava.png" alt="Lukasss895" class="panacik-img">
             
-            <img src="lukas-oprava.png" alt="Lukáš" class="mini-panacik">
-            
-            <h1>CS:CO (Classic Offensive)</h1>
-            <h2 class="subtitle">Návrat Legendy</h2>
+            <h1>CS:CO</h1>
+            <span class="subtitle">Classic Offensive Mod</span>
             
             <p class="game-desc">
-                Priprav sa na čistý Source engine zážitok v temnom, hernom dízajne. 
-                Vysoko výkonná optimalizácia, ikonické zbrane bez skinov, staré modely a pohyb, ktorý si zamiluješ. 
-                Pripomeň si staré dobré časy CS 1.6!
+                Counter-Strike: Classic Offensive je modifikácia, ktorá vracia ducha starej verzie 1.6 do novšieho enginu. 
+                Vychutnaj si pôvodné modely zbraní, zvuky a ikonické mapy bez zbytočných skinov. 
+                Čistá hrateľnosť, čistý skill!
             </p>
 
             <a href="https://gofile.io/d/TUJyr3" target="_blank" class="download-btn">
-                📥 STIAHNUŤ HRU (ZIP)
+                📥 STIAHNUŤ ZIP (1.6 GB)
             </a>
-
         </div>
 
-        <a href="index.html" class="back-link">← Späť na domovskú stránku</a>
+        <a href="index.html" class="back-link">← Návrat na hlavnú stránku</a>
     </div>
 
+</body>
+</html>
 </body>
 </html>
