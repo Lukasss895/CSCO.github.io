@@ -133,11 +133,17 @@
             </a>
         </div>
       
-     <div style="margin-bottom: 20px; font-family: Arial, sans-serif; font-weight: bold;">
-    <p style="color: #ff0000; font-size: 0.9rem; text-transform: uppercase; margin-bottom: 5px;">Hráči na stránke:</p>
-    <img src="https://hitwebcounter.com/counter/counter.php?page=lukasss895_csco&style=0005&nbdigits=5&type=page&initCount=0" title="Free Counter" Alt="web counter" border="0" style="border-radius: 5px; box-shadow: 0 0 10px rgba(255,0,0,0.5);">
+  <div style="margin-bottom: 25px; padding: 10px; background: rgba(255, 0, 0, 0.05); border-radius: 10px; border: 1px solid rgba(255, 0, 0, 0.2); display: inline-block;">
+    <p style="color: #777; font-size: 0.8rem; text-transform: uppercase; margin: 0;">Celkový počet návštev:</p>
+    <span id="visits" style="color: #ff0000; font-size: 2rem; font-weight: bold; font-family: 'Courier New', monospace;">0</span>
 </div>
 
+<script>
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+</script>
+<script async src="https://api.countapi.xyz/hit/lukasss895-csco/visits?callback=cb"></script>
         <a href="index.html" class="back-link">← Návrat na hlavnú stránku</a>
     </div>
 
